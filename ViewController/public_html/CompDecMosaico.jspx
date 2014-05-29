@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:componentDef var="attrs" componentVar="component">
+    <af:panelBox text="#{attrs.tituloPanel}" id="dc_pb1" titleHalign="center" showDisclosure="false">
+      <af:panelGridLayout id="dc_pgl1" inlineStyle="#{attrs.inLineStyleComp}" dimensionsFrom="#{attrs.dimensionsFromComp}" binding="#{MosaicoBean.pgLayout}"/>
+    </af:panelBox>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>CompDecMosaico</display-name>
+        <component-class>es.ramondin.compdec.mosaico.view.component.CompDecMosaico</component-class>
+        <attribute>
+          <description>Especifica el título del panel.</description>
+          <attribute-name>tituloPanel</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el número de filas a mostrar.</description>
+          <attribute-name>numFilas</attribute-name>
+          <attribute-class>java.lang.Integer</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el número de columnas a mostrar.</description>
+          <attribute-name>numColumnas</attribute-name>
+          <attribute-class>java.lang.Integer</attribute-class>
+          <default-value>4</default-value>
+        </attribute>
+        <attribute>
+          <description>Especifica el alto de fila a mostrar.</description>
+          <attribute-name>altoFila</attribute-name>
+          <attribute-class>java.lang.Integer</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el ancho de columna a mostrar.</description>
+          <attribute-name>anchoColumna</attribute-name>
+          <attribute-class>java.lang.Integer</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Establece el inline style del componente declarativo.</description>
+          <attribute-name>inLineStyleComp</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Establece el desde dónde tomará las dimensiones el componente declarativo.</description>
+          <attribute-name>dimensionsFromComp</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>children</default-value>
+        </attribute>
+        <attribute>
+          <description>Especifica el array de componentes para el mosaico.</description>
+          <attribute-name>arrayComponentes</attribute-name>
+          <attribute-class>oracle.jbo.domain.Array</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el array pares [fila, columna] de posiciones de los componentes en el mosaico. Si no se especifica se rellenará de izquierda a
+                       derecha, completando el número de columnas por fila hasta completar el número de filas</description>
+          <attribute-name>arrayPosiciones</attribute-name>
+          <attribute-class>oracle.jbo.domain.Array</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el array de alineaciones horizontales de los componentes del mosaico.</description>
+          <attribute-name>arrayHAlignComps</attribute-name>
+          <attribute-class>oracle.jbo.domain.Array</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el array de alineaciones verticales de los componentes del mosaico.</description>
+          <attribute-name>arrayVAlignComps</attribute-name>
+          <attribute-class>oracle.jbo.domain.Array</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el array de colSpan de los componentes del mosaico.</description>
+          <attribute-name>arrayColSpanComps</attribute-name>
+          <attribute-class>oracle.jbo.domain.Array</attribute-class>
+        </attribute>
+        <attribute>
+          <description>Especifica el array de rowSpan de los componentes del mosaico.</description>
+          <attribute-name>arrayRowSpanComps</attribute-name>
+          <attribute-class>oracle.jbo.domain.Array</attribute-class>
+        </attribute>
+        <component-extension>
+          <component-tag-namespace>es.ramondin.compdec.mosaico.view.component</component-tag-namespace>
+          <component-taglib-uri>/MosaicoLib</component-taglib-uri>
+        </component-extension>
+      </component>
+    </af:xmlContent>
+  </af:componentDef>
+</jsp:root>
