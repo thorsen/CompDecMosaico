@@ -2,9 +2,7 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <af:componentDef var="attrs" componentVar="component">
-    <af:panelBox text="#{attrs.tituloPanel}" id="dc_pb1" titleHalign="center" showDisclosure="false">
       <af:panelGridLayout id="dc_pgl1" inlineStyle="#{attrs.inLineStyleComp}" dimensionsFrom="#{attrs.dimensionsFromComp}" binding="#{MosaicoBean.pgLayout}"/>
-    </af:panelBox>
     <af:xmlContent>
       <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
         <display-name>CompDecMosaico</display-name>
